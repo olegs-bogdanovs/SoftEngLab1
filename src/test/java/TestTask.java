@@ -1,4 +1,4 @@
-import com.tsi.softenf.lab1.Exceptions.DateException;
+import com.tsi.softenf.lab1.exceptions.DateException;
 import com.tsi.softenf.lab1.Task;
 import org.junit.Before;
 import org.junit.Test;

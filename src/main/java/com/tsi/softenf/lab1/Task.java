@@ -1,6 +1,6 @@
 package com.tsi.softenf.lab1;
 
-import com.tsi.softenf.lab1.Exceptions.DateException;
+import com.tsi.softenf.lab1.exceptions.DateException;
 
 import java.util.Date;
 
