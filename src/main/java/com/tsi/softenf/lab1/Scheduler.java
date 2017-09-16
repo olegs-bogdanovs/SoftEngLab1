@@ -1,6 +1,8 @@
+package com.tsi.softenf.lab1;
+
+import com.tsi.softenf.lab1.Exceptions.DateException;
+
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
 
 public class Scheduler {
     private ArrayList<Task> taskList;
