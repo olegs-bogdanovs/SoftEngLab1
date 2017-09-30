@@ -49,4 +49,10 @@ public class TestScheduler {
         assertTrue(taskList.contains(task1));
         assertTrue(taskList.contains(task2));
     }
+
+    @Test
+    public void testNullOptimalSchedule() throws DateException{
+        Scheduler scheduler = new Scheduler();
+        assertTrue(scheduler.getOptimalTaskList() == null);
+    }
 }
