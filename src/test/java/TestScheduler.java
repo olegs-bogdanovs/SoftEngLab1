@@ -51,8 +51,36 @@ public class TestScheduler {
     }
 
     @Test
-    public void testNullOptimalSchedule() throws DateException{
+    public void testOptimalSchedulePath1() throws DateException{
         Scheduler scheduler = new Scheduler();
-        assertTrue(scheduler.getOptimalTaskList() == null);
+        assertEquals(0, scheduler.getOptimalTaskList().size());
+    }
+
+    @Test
+    public void testOptimalSchedulePath2() throws DateException{
+        Scheduler scheduler = new Scheduler();
+        scheduler.addTask(task1);
+        assertEquals(1, scheduler.getOptimalTaskList().size());
+        assertTrue(scheduler.getOptimalTaskList().contains(task1));
+    }
+
+    @Test
+    public void testOptimalSchedulePath5() throws DateException{
+        Scheduler scheduler = new Scheduler();
+        scheduler.addTask(task2);
+        scheduler.addTask(task1);
+        assertEquals(2, scheduler.getOptimalTaskList().size());
+        assertTrue(scheduler.getOptimalTaskList().contains(task1));
+        assertTrue(scheduler.getOptimalTaskList().contains(task2));
+    }
+
+    @Test
+    public void testOptimalSchedulePath6() throws DateException{
+        Scheduler scheduler = new Scheduler();
+        scheduler.addTask(task3);
+        scheduler.addTask(task1);
+        assertEquals(1, scheduler.getOptimalTaskList().size());
+        assertTrue(scheduler.getOptimalTaskList().contains(task1));
     }
 }
+
