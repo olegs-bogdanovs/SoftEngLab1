@@ -69,7 +69,7 @@ public class TestScheduler {
         Scheduler scheduler = new Scheduler();
         scheduler.addTask(task2);
         scheduler.addTask(task1);
-        assertEquals(2, scheduler.getOptimalTaskList().size());
+        assertEquals(1, scheduler.getOptimalTaskList().size());
         assertTrue(scheduler.getOptimalTaskList().contains(task1));
         assertTrue(scheduler.getOptimalTaskList().contains(task2));
     }
